@@ -1,0 +1,5 @@
+# Don't attempt any end-of-line conversion upon checkin/checkout
+*          -text
+
+# Force line endings in the following files
+*.py       eol=lf
