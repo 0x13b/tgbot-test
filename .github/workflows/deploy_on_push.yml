@@ -20,4 +20,5 @@ jobs:
           cd ~/code/tgbot-test/
           git fetch
           git reset --hard origin/main
+          chmod u+x ./start.sh
           sudo systemctl restart tgbot-test

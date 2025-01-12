@@ -3,3 +3,4 @@
 
 # Force line endings in the following files
 *.py       eol=lf
+*.sh       eol=lf
