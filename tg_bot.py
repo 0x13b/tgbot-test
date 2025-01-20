@@ -1,4 +1,5 @@
 import logging
+import os
 from uuid import uuid4
 
 from telegram import (
@@ -15,6 +16,10 @@ from telegram.ext import (
     MessageHandler,
     InlineQueryHandler,
 )
+
+
+#%% Загружаем секреты
+BOT_TOKEN = os.getenv("TG_TEST_BOT_TOKEN")
 
 
 #%% Логгирование
@@ -92,7 +97,7 @@ async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 if __name__ == '__main__':
     
     # Создаём приложение (Updater будет создан автоматически)
-    application = ApplicationBuilder().token('7503171546:AAGEttMhF-G7jlK-SBIwQN7hvhpiB-u2hRs').build()
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
    
     #
     ## /start
