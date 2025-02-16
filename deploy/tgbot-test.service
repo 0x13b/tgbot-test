@@ -1,0 +1,19 @@
+[Unit]
+Desctiption=Telegram bot for testing
+After=network.target
+
+[Service]
+Type=simple
+User=tgbot
+Group=tgbot
+ExecSearchPath=/home/tgbot/code/tgbot-test
+WorkingDirectory=/home/tgbot/code/tgbot-test
+EnvironmentFile=/home/tgbot/code/tgbot-test/ignored/dev.env
+PassEnvironment=TG_TEST_BOT_TOKEN
+ExecStart=start.sh
+Restart=always
+
+[Install]
+# Когда стартует служба
+WantedBy=multi-user.target
+
